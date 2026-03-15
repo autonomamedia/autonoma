@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autonoma - Enterprise Content Publishing Automation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            autonoma: {
+              cyan: '#22d3ee',
+              purple: '#a855f7',
+            }
+          },
+          fontFamily: {
+            heading: ['system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #07090E;
+      color: #e2e8f0;
+    }
+    .glass {
+      background: rgba(30, 41, 59, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .delay-100 { animation-delay: 100ms; }
+    .delay-200 { animation-delay: 200ms; }
+    .delay-300 { animation-delay: 300ms; }
+  </style>
+</head>
+<body class="min-h-screen overflow-x-hidden pt-4 selection:bg-autonoma-cyan/30 text-slate-200 relative">
+  <!-- Dynamic Background -->
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+    <div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-autonoma-cyan/10 blur-[120px]"></div>
+    <div class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-autonoma-purple/10 blur-[120px]"></div>
+    <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="relative z-10 max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-autonoma-cyan to-autonoma-purple flex items-center justify-center font-black text-white text-xl shadow-[0_0_20px_rgba(8,145,178,0.4)]">A</div>
+      <span class="text-2xl font-black tracking-tight text-white font-heading">Autonoma</span>
+    </div>
+    <div class="hidden md:flex gap-8 text-sm font-bold text-slate-400">
+      <a href="#features" class="hover:text-white transition-colors">Features</a>
+      <a href="#integration" class="hover:text-white transition-colors">Platform Integration</a>
+      <a href="#security" class="hover:text-white transition-colors">Security</a>
+    </div>
+    <div class="flex gap-4 items-center">
+      <a href="login.html" class="px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-sm font-bold transition-all text-white">Log In</a>
+      <a href="login.html" class="px-5 py-2.5 bg-gradient-to-r from-autonoma-cyan to-blue-600 rounded-xl text-sm font-bold text-white shadow-lg hover:shadow-autonoma-cyan/25 transition-all">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-32 flex flex-col items-center text-center">
+    <div class="max-w-4xl flex flex-col items-center">
+
+      
+      <h1 class="fade-in delay-100 text-5xl md:text-7xl font-black text-white leading-[1.1] tracking-tight mb-8 font-heading">
+        Enterprise Content <br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-autonoma-cyan via-blue-400 to-autonoma-purple">Publishing Automation</span>
+      </h1>
+      
+      <p class="fade-in delay-200 text-lg md:text-xl text-slate-400 mb-10 max-w-2xl leading-relaxed">
+        Autonoma empowers brands and agencies to seamlessly schedule, manage, and publish high-performance video content across social platforms directly from a centralized pipeline.
+      </p>
+      
+      <div class="fade-in delay-300 flex gap-4">
+        <a href="login.html" class="px-8 py-4 bg-white text-slate-900 rounded-2xl font-black text-lg hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)] flex items-center gap-2">
+          Start Free Trial <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+        <a href="login.html" class="px-8 py-4 glass rounded-2xl font-bold text-lg text-white hover:bg-white/10 transition-all border border-white/10">
+          Book Demo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integration Showcase -->
+  <section id="integration" class="relative z-10 border-y border-white/5 bg-slate-900/40">
+    <div class="max-w-7xl mx-auto px-6 py-24">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-3xl md:text-5xl font-black text-white mb-6 font-heading tracking-tight">
+            Built for <span class="text-autonoma-cyan">TikTok</span> Native Publishing
+          </h2>
+          <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+            By utilizing the official TikTok Direct Post API, Autonoma establishes a secure, authenticated connection to empower brands with seamless content orchestration without risking account integrity.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-slate-300 font-medium">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-autonoma-cyan shrink-0"></i> Direct secure OAuth 2.0 authentication
+            </li>
+            <li class="flex items-center gap-3 text-slate-300 font-medium">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-autonoma-cyan shrink-0"></i> Automated video uploading and scheduling
+            </li>
+            <li class="flex items-center gap-3 text-slate-300 font-medium">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-autonoma-cyan shrink-0"></i> Draft management and audience targeting
+            </li>
+            <li class="flex items-center gap-3 text-slate-300 font-medium">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-autonoma-cyan shrink-0"></i> AI-generated content disclosures supported
+            </li>
+          </ul>
+        </div>
+        
+        <div class="relative">
+           <div class="absolute inset-0 bg-gradient-to-tr from-autonoma-cyan/20 to-autonoma-purple/20 rounded-[2.5rem] blur-2xl"></div>
+           <div class="glass p-8 rounded-[2.5rem] border border-white/10 relative shadow-2xl">
+             <div class="flex items-center justify-between mb-8 pb-6 border-b border-white/5">
+               <div class="flex gap-3 items-center">
+                 <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center border border-white/5 text-white">
+                    <i data-lucide="video" class="w-6 h-6"></i>
+                 </div>
+                 <div>
+                   <h4 class="font-bold text-white">Direct Post Protocol</h4>
+                   <p class="text-xs text-autonoma-cyan font-mono mt-1">Status: Verified & Encrypted</p>
+                 </div>
+               </div>
+               <div class="px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-lg text-xs font-black uppercase tracking-wider">
+                 Connected
+               </div>
+             </div>
+             <div class="space-y-4 font-mono text-sm text-slate-400">
+               <div class="flex justify-between p-3 bg-slate-900/50 rounded-lg border border-white/5">
+                 <span>Endpoint</span><span class="text-white">v2/post/publish/</span>
+               </div>
+               <div class="flex justify-between p-3 bg-slate-900/50 rounded-lg border border-white/5">
+                 <span>Authentication</span><span class="text-white">OAuth 2.0 (PKCE)</span>
+               </div>
+               <div class="flex justify-between p-3 bg-slate-900/50 rounded-lg border border-white/5">
+                 <span>Data Encryption</span><span class="text-emerald-400">AES-256-GCM</span>
+               </div>
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section id="features" class="relative z-10 max-w-7xl mx-auto px-6 py-32">
+    <div class="text-center mb-16">
+       <h2 class="text-3xl md:text-5xl font-black text-white font-heading tracking-tight mb-4">Complete Production Suite</h2>
+       <p class="text-slate-400">Everything your team needs to scale video commerce.</p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-6">
+       <div class="glass p-8 rounded-3xl border border-white/5 hover:bg-slate-800/40 transition-colors">
+          <div class="w-14 h-14 bg-autonoma-cyan/10 rounded-2xl flex items-center justify-center mb-6 border border-autonoma-cyan/20">
+            <i data-lucide="globe" class="w-7 h-7 text-autonoma-cyan"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Omnichannel Sync</h3>
+          <p class="text-slate-400 leading-relaxed">Manage your content calendar across multiple accounts and platforms from a single unified dashboard.</p>
+       </div>
+       
+       <div class="glass p-8 rounded-3xl border border-white/5 hover:bg-slate-800/40 transition-colors">
+          <div class="w-14 h-14 bg-autonoma-purple/10 rounded-2xl flex items-center justify-center mb-6 border border-autonoma-purple/20">
+            <i data-lucide="bar-chart-3" class="w-7 h-7 text-autonoma-purple"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Performance Analytics</h3>
+          <p class="text-slate-400 leading-relaxed">Track views, engagement, and conversion metrics in real-time to optimize your content strategy.</p>
+       </div>
+       
+       <div class="glass p-8 rounded-3xl border border-white/5 hover:bg-slate-800/40 transition-colors">
+          <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 border border-blue-500/20">
+            <i data-lucide="target" class="w-7 h-7 text-blue-400"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Audience Targeting</h3>
+          <p class="text-slate-400 leading-relaxed">Utilize demographic data and scheduling algorithms to post exactly when your audience is most active.</p>
+       </div>
+    </div>
+  </section>
+
+  <!-- Security Section -->
+  <section id="security" class="relative z-10 max-w-7xl mx-auto px-6 py-24 border-t border-white/5">
+     <div class="flex flex-col items-center text-center max-w-3xl mx-auto">
+        <i data-lucide="shield" class="w-12 h-12 text-slate-300 mb-6"></i>
+        <h2 class="text-3xl font-black text-white font-heading tracking-tight mb-4">Enterprise-Grade Security & Compliance</h2>
+        <p class="text-slate-400 leading-relaxed mb-8">
+          Autonoma is built with a security-first architecture. We strictly adhere to TikTok's Developer Terms of Service and Data Security guidelines. We never store user passwords—all authentication is handled securely via official OAuth 2.0 flows, and tokens are encrypted at rest.
+        </p>
+     </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative z-10 border-t border-white/5 bg-black">
+    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-2">
+         <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-autonoma-cyan to-autonoma-purple flex items-center justify-center font-black text-white text-sm">A</div>
+         <span class="font-bold text-white tracking-tight">Autonoma Inc.</span>
+      </div>
+      
+      <div class="flex gap-8 text-sm font-medium text-slate-500">
+         <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+         <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+         <a href="#" class="hover:text-white transition-colors">API Guidelines</a>
+         <a href="#" class="hover:text-white transition-colors">Contact</a>
+      </div>
+      
+      <div class="text-sm font-medium text-slate-600">
+        &copy; 2024 Autonoma. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Icons Initialization -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
